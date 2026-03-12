@@ -23,6 +23,7 @@ public class GravityApple extends Item {
                         1.0f
                     )
             )
-        .build();
+            .consumeSeconds(0.5f)
+            .build();
 
 }
