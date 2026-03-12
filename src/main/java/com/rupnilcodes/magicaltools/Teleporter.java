@@ -8,6 +8,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 
 import net.minecraft.world.level.Level;
@@ -54,15 +56,41 @@ public class Teleporter extends Item {
 
         if (!level.isClientSide()) {
             Vec3 look_vector = player.getLookAngle();
-            Vec3 target_position = player.position().add(look_vector.scale(DISTANCE));
+            Vec3 start_pos = player.position();
+            Vec3 end_pos = start_pos.add(look_vector.scale(DISTANCE));
 
-            BlockPos target_block_position = BlockPos.containing(target_position);
+            BlockPos end_block_pos, final_teleport_location;
 
-            MagicalTools.LOGGER.info(target_position.toString());
+            ClipContext context = new ClipContext(
+                    start_pos, end_pos,
+                    ClipContext.Block.COLLIDER,
+                    ClipContext.Fluid.NONE,
+                    player
+            );
+            HitResult hit_res = level.clip(context);
 
-            BlockPos final_teleport_location = findSafeLocation(look_vector, player, level, target_block_position, 1);
+            if (hit_res.getType() != HitResult.Type.MISS) {
+                end_pos = hit_res.getLocation();
+                end_block_pos = BlockPos.containing(end_pos);
+                final_teleport_location = findSafeLocation(look_vector, player, level, end_block_pos, 1);
+            }
+            else {
+                Vec3 target_position = player.position().add(look_vector.scale(DISTANCE));
+                end_block_pos = BlockPos.containing(target_position);
+                final_teleport_location = findSafeLocation(look_vector, player, level, end_block_pos, 1);
 
+            }
+
+//            Vec3 target_position = player.position().add(look_vector.scale(DISTANCE));
+//
+//            BlockPos target_block_position = BlockPos.containing(target_position);
+//
+//            MagicalTools.LOGGER.info(target_position.toString());
+//
+//            BlockPos final_teleport_location = findSafeLocation(look_vector, player, level, target_block_position, 1);
+//
             player.teleportTo(final_teleport_location.getX(), final_teleport_location.getY(), final_teleport_location.getZ());
+
             level.playSound(null, player.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0f, 1.0f);
 
             player.getCooldowns().addCooldown(stack, COOLDOWN);
