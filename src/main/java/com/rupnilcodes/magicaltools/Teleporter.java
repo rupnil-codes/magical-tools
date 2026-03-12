@@ -4,6 +4,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
@@ -19,8 +21,8 @@ public class Teleporter extends Item {
 
     public static final int DURABILITY = 10;
     public static final int DISTANCE = 16;
-//    public static final int COOLDOWN = 6 * 20;
-    public static final int COOLDOWN = 0;
+
+    public static final int COOLDOWN = 6 * 20;
 
     public Teleporter(Item.Properties properties) {
         super(properties);

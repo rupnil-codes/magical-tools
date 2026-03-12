@@ -7,21 +7,36 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.ArmorType;
+
 import java.util.function.Function;
 
 public class ModItems {
     public static final Teleporter TELEPORTER =
             register("teleporter", Teleporter::new, new Item.Properties().durability(Teleporter.DURABILITY));
 
-    public static final JumpBoots JUMP_BOOTS =
-            register("jump_boots", JumpBoots::new, new Item.Properties());
+//    public static final JumpBoots JUMP_BOOTS =
+    ////            register(
+    ////                    "jump_boots",
+    ////                    JumpBoots::new,
+    ////                    new Item.Properties().humanoidArmor(
+    ////
+    ////                    )
+    ////            );
+
+    public static final Item JUMP_BOOTS = register(
+            "jump_boots",
+            Item::new,
+            new Item.Properties().humanoidArmor(JumpBoots.INSTANCE, ArmorType.BOOTS)
+                    .durability(ArmorType.BOOTS.getDurability(JumpBoots.BASE_DURABILITY))
+    );
 
     public static final GravityApple GRAVITY_APPLE =
             register(
                     "gravity_apple",
                     GravityApple::new,
                     new Item.Properties().food(
-                        GravityApple.FOOD_COMPONENT,
+                            GravityApple.FOOD_COMPONENT,
                         GravityApple.FOOD_CONSUMABLE_COMPONENT
                     )
             );
