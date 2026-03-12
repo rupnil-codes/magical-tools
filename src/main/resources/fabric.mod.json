@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "magical-tools",
+  "version": "${version}",
+
+  "name": "Magical Tools",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "AGPL-3.0",
+  "icon": "assets/magical-tools/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "main": ["com.rupnilcodes.magicalTools.MagicalTools"]
+  },
+
+  "mixins": [
+    "magical-tools.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
