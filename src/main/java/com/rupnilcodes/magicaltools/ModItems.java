@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Teleporter TELEPORTER =
-            register("teleporter", Teleporter::new, new Item.Properties());
+            register("teleporter", Teleporter::new, new Item.Properties().durability(Teleporter.DURABILITY));
 
     public static final JumpBoots JUMP_BOOTS =
             register("jump_boots", JumpBoots::new, new Item.Properties());
