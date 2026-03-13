@@ -8,7 +8,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -25,8 +24,8 @@ import org.jspecify.annotations.Nullable;
 
 import java.util.Map;
 
-public class JumpBoots extends Item {
-    public JumpBoots(Properties properties) {
+public class RabbitShoes extends Item {
+    public RabbitShoes(Properties properties) {
         super(properties);
     }
     public static final int BASE_DURABILITY = 8;
@@ -35,7 +34,7 @@ public class JumpBoots extends Item {
             ResourceKey.create(
                     EquipmentAssets.ROOT_ID,
                     Identifier.fromNamespaceAndPath(
-                            MagicalTools.MOD_ID, "jump"
+                            MagicalTools.MOD_ID, "rabbit"
                     )
             );
 
@@ -43,7 +42,7 @@ public class JumpBoots extends Item {
             TagKey.create(
                     BuiltInRegistries.ITEM.key(),
                     Identifier.fromNamespaceAndPath(
-                            MagicalTools.MOD_ID, "repairs_jump_armor"
+                            MagicalTools.MOD_ID, "repairs_rabbit_armor"
                     )
             );
 
@@ -62,11 +61,9 @@ public class JumpBoots extends Item {
 
     @Override
     public void inventoryTick(ItemStack itemStack, ServerLevel serverLevel, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
-        MagicalTools.LOGGER.info("tick tock");
         if (entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET) == itemStack) {
-            MagicalTools.LOGGER.info("SLOTTED");
 
-            var instance = new MobEffectInstance(HaresBlessingEffect.HARES_BLESSING, 1, 0, true, false, true);
+            var instance = new MobEffectInstance(MobEffects.HARES_BLESSING, 20, 0, true, false, true);
             player.addEffect(instance);
         }
     }

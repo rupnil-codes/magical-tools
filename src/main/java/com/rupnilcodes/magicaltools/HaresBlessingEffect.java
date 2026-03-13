@@ -1,9 +1,5 @@
 package com.rupnilcodes.magicaltools;
 
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -11,20 +7,10 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 
 public class HaresBlessingEffect extends MobEffect {
-
-    public static Holder<MobEffect> HARES_BLESSING;
-
     public HaresBlessingEffect() {
         super(MobEffectCategory.BENEFICIAL, 0x88FF88);
     }
 
-    public static void register() {
-        HARES_BLESSING = Registry.registerForHolder(
-                BuiltInRegistries.MOB_EFFECT,
-                Identifier.fromNamespaceAndPath(MagicalTools.MOD_ID, "hares_blessing"),
-                new HaresBlessingEffect()
-        );
-    }
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
@@ -33,13 +19,11 @@ public class HaresBlessingEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
-        if (entity instanceof Player) {
-            if (entity.isJumping()) {
-                MagicalTools.LOGGER.info("Jumping");
-            }
+        if (entity instanceof Player player) {
+            player.fallDistance = 0.0F;
         }
 
-        return super.applyEffectTick(level, entity, amplifier);
+        return true;
     }
 
 }

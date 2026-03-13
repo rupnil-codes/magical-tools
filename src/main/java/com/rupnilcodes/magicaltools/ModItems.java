@@ -14,20 +14,11 @@ public class ModItems {
     public static final Teleporter TELEPORTER =
             register("teleporter", Teleporter::new, new Item.Properties().durability(Teleporter.DURABILITY));
 
-//    public static final JumpBoots JUMP_BOOTS =
-    ////            register(
-    ////                    "jump_boots",
-    ////                    JumpBoots::new,
-    ////                    new Item.Properties().humanoidArmor(
-    ////
-    ////                    )
-    ////            );
-
-    public static final JumpBoots JUMP_BOOTS = register(
-            "jump_boots",
-            JumpBoots::new,
-            new Item.Properties().humanoidArmor(JumpBoots.INSTANCE, ArmorType.BOOTS)
-                    .durability(ArmorType.BOOTS.getDurability(JumpBoots.BASE_DURABILITY))
+    public static final RabbitShoes RABBIT_SHOES = register(
+            "rabbit_shoes",
+            RabbitShoes::new,
+            new Item.Properties().humanoidArmor(RabbitShoes.INSTANCE, ArmorType.BOOTS)
+                    .durability(ArmorType.BOOTS.getDurability(RabbitShoes.BASE_DURABILITY))
     );
 
     public static final GravityApple GRAVITY_APPLE =
