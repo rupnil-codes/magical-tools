@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "magicaltools:item/rabbit_shoes",
+    "layer1": "magicaltools:item/rabbit_shoes_overlay"
+  }
+}

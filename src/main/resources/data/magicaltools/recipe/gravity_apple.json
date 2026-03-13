@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#A#",
+    " # "
+  ],
+  "key": {
+    "#": "minecraft:feather",
+    "A": "minecraft:apple"
+  },
+  "result": {
+    "id": "magicaltools:gravity_apple",
+    "count": 1
+  }
+}

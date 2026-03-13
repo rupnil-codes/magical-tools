@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "RBR",
+    " i "
+  ],
+  "key": {
+    "#": "minecraft:string",
+    "R": "minecraft:redstone",
+    "B": "minecraft:bundle",
+    "i": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "magicaltools:vacuum_pouch",
+    "count": 1
+  }
+}

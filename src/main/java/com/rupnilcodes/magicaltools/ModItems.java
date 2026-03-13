@@ -11,6 +11,9 @@ import net.minecraft.world.item.equipment.ArmorType;
 import java.util.function.Function;
 
 public class ModItems {
+    public static final VacuumPouch VACUUM_POUCH =
+            register("vacuum_pouch", VacuumPouch::new, new Item.Properties());
+
     public static final Teleporter TELEPORTER =
             register("teleporter", Teleporter::new, new Item.Properties().durability(Teleporter.DURABILITY));
 

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "R R"
+  ],
+  "key": {
+    "#": "minecraft:leather_boots",
+    "R": "minecraft:rabbit_foot"
+  },
+  "result": {
+    "id": "magicaltools:rabbit_shoes",
+    "count": 1
+  }
+}

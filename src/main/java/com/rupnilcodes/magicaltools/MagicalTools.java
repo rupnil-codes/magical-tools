@@ -2,6 +2,9 @@ package com.rupnilcodes.magicaltools;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.resources.ResourceKey;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +17,7 @@ public class MagicalTools implements ModInitializer {
     public void onInitialize() {
         ModItems.initialize();
         MobEffects.initialize();
+
         LOGGER.info(MOD_ID + " Initialized!");
     }
 }
