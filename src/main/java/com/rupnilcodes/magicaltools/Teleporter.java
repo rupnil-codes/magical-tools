@@ -20,7 +20,7 @@ import org.jspecify.annotations.NonNull;
 public class Teleporter extends Item {
 
     public static final int DURABILITY = 10;
-    public static final int DISTANCE = 16;
+    public static final int DISTANCE = 20;
 
     public static final int COOLDOWN = 6 * 20;
 
