@@ -3,5 +3,6 @@
     "item.magicaltools.jump_boots": "Jump Boots",
     "item.magicaltools.teleporter": "Teleporter",
 
-    "itemGroup.magicaltools.test_group": "Magical Tools"
+    "itemGroup.magicaltools.test_group": "Magical Tools",
+    "effect.magicaltools.hares_blessing": "Hare's Blessing"
 }

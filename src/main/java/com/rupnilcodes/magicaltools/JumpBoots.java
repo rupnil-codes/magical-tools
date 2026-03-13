@@ -7,16 +7,20 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
 import java.util.Map;
@@ -58,10 +62,12 @@ public class JumpBoots extends Item {
 
     @Override
     public void inventoryTick(ItemStack itemStack, ServerLevel serverLevel, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+        MagicalTools.LOGGER.info("tick tock");
         if (entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET) == itemStack) {
-            if (player.onGround() && player.isJumping()) {
-                player.setDeltaMovement(player.getDeltaMovement().x, 69, player.getDeltaMovement().z);
-            }
+            MagicalTools.LOGGER.info("SLOTTED");
+
+            var instance = new MobEffectInstance(HaresBlessingEffect.HARES_BLESSING, 1, 0, true, false, true);
+            player.addEffect(instance);
         }
     }
 }

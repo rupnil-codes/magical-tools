@@ -5,7 +5,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.ArmorType;
 
@@ -24,9 +23,9 @@ public class ModItems {
     ////                    )
     ////            );
 
-    public static final Item JUMP_BOOTS = register(
+    public static final JumpBoots JUMP_BOOTS = register(
             "jump_boots",
-            Item::new,
+            JumpBoots::new,
             new Item.Properties().humanoidArmor(JumpBoots.INSTANCE, ArmorType.BOOTS)
                     .durability(ArmorType.BOOTS.getDurability(JumpBoots.BASE_DURABILITY))
     );
