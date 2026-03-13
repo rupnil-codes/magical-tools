@@ -14,23 +14,49 @@ With the Magical Tool's mod you get access to four(4) new items with unique prop
 ---
 ## Features:
 As this is my first time making a mod for Minecraft I've kept the list short, but that doesn't mean that I put less effort into this. I've really tried my best. Enough yapping, here are the additions:
-1. **Gravity Apple:** This item is crafted with an apple surrounded by feathers in a star pattern (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
-    - Fast Eating time: 0.5s, for quick life-saves!
-    - Gives slow falling 2 for 10sec
-2. **Teleporter:** This item is crafted with two ender pearls and two leads (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
-    - Teleports to 20 block in the direction you are looking
-    - Cooldown 6 sec
-    - 10 uses allowed
-3. **Rabbit Shoes:** This item is crafted with two leather boots and two rabbit's foot (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
-    - Increases jump height about 3 blocks jumps
-    - Gives speed buff
-    - Gives a custom Status Effect: Hare's Blessing
-    - Negates all fall damage
-4. **Vacuum Pouch:** This item is crafted with a bundle with string at the top, iron at the bottom and two redstone dusts on its sides in a star pattern. (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
-    - Attracts all nearby items towards the player (within 24 block radius)
-    - Attraction speed is 0.3f
-    - Works passively in off or main hand
-    - Particle Effects!
+
+- **Gravity Apple:** This item is crafted with an apple surrounded by feathers in a star pattern (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
+   - Fast Eating time: 0.5s, for quick life-saves!
+   - Gives slow falling 2 for 10sec
+
+   > A life-saving snack!
+
+  #### Crafting Recipe:
+  ![Gravity Apple Crafting Recipe](https://cdn.modrinth.com/data/cached_images/b8a01280626722631a84ad41c921400d28a20d77.gif)
+
+
+- **Teleporter:** This item is crafted with two ender pearls and two leads (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
+   - Teleports to 20 block in the direction you are looking
+   - Cooldown 6 sec
+   - 10 uses allowed
+  
+   > It helps you get out of sticky situations!
+
+  #### Crafting Recipe:
+  ![Teleporter Crafting Recipe](https://cdn.modrinth.com/data/cached_images/322ccace6a73b8fe64a0380b39d26f9b090f69b3.gif)
+
+- **Rabbit Shoes:** This item is crafted with two leather boots and two rabbit's foot (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
+   - Increases jump height about 3 blocks jumps
+   - Gives speed buff
+   - Gives a custom Status Effect: Hare's Blessing
+   - Negates all fall damage
+
+   > It lets to run away from enemies fast! It also lets you climb high and fall low with ease!
+
+  #### Crafting Recipe:
+  ![Rabbit Shoe Crafting Recipe](https://cdn.modrinth.com/data/cached_images/3cc37b2b999b5bfe3fbe9b502287ecb1c4db5b4d.gif)
+
+
+- **Vacuum Pouch:** This item is crafted with a bundle with string at the top, iron at the bottom and two redstone dusts on its sides in a star pattern. (refer: [Gallery](https://modrinth.com/mod/rupnils-magical-tools/gallery)). It has the following features:
+   - Attracts all nearby items towards the player (within 24 block radius)
+   - Attraction speed is 0.3f
+   - Works passively in off or main hand
+   - Particle Effects!
+
+   > It helps you collect your friend's loot easily!
+
+  #### Crafting Recipe:
+  ![Vacuum Pouch Crafting Recipe](https://cdn.modrinth.com/data/cached_images/9ebaf7cdc88879a99e2fc86126ea002af7ac3ca3.gif)
 
 ---
 
