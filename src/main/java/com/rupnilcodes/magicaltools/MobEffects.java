@@ -23,7 +23,7 @@ public class MobEffects {
                         .addAttributeModifier(
                                 Attributes.JUMP_STRENGTH,
                                 Identifier.withDefaultNamespace("effect.jump_boost"),
-                                (double)0.6F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
+                                (double)0.69F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                         )
         );
     }

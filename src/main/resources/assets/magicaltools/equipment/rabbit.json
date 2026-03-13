@@ -1,0 +1,12 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "magicaltools:rabbit"
+      },
+      {
+        "texture": "magicaltools:rabbit_overlay"
+      }
+    ]
+  }
+}

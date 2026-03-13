@@ -49,7 +49,7 @@ public class RabbitShoes extends Item {
     public static final ArmorMaterial INSTANCE = new ArmorMaterial(
             BASE_DURABILITY,
             Map.of(
-                    ArmorType.BOOTS, 3
+                    ArmorType.BOOTS, 2
             ),
             5,
             SoundEvents.ARMOR_EQUIP_LEATHER,
